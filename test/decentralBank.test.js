@@ -36,5 +36,15 @@ contract("decentralBank", (accounts) => {
       const name = await rwd.name();
       assert.equal(name, "Reward Token");
     });
+
+    it("Decentral Bank Deployment & Matches name Successfully", async () => {
+      const name = await dcBank.name();
+      assert.equal(name, "Decentral Bank");
+    });
+
+    it("contract has tokens", async () => {
+      let balance = await rwd.balanceOf(dcBank.address);
+      assert.equal(balance, tokens("1000000"));
+    });
   });
 });
