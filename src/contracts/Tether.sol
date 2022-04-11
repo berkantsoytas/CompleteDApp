@@ -4,7 +4,7 @@ pragma solidity ^0.5.16;
 contract Tether {
   string public name = "Tether";
   string public symbol = "USDT";
-  uint256 public totalSuply = 10000000000000000000000000; // 10 Million USDT
+  uint256 public totalSuply = 1000000000000000000000000; // 1 Million USDT
   uint8 public decimals = 18;
 
   event Transfer(address indexed from, address indexed to, uint256 value);
